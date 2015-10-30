@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".Principal"
+    >
+
+    <item
+        android:id="@+id/Iniciar"
+        android:title="Iniciar Sesion"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Cerrar"
+        android:title="Cerrar Sesion"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+
+</menu>
