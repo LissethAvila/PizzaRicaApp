@@ -1,12 +1,7 @@
 package privado.lisseth.pizzaricaapp;
 
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -14,15 +9,20 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 
 public class Principal extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener{
 
+
+
     private ViewPager mViewPager;;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class Principal extends ActionBarActivity implements ActionBar.TabListene
             tab = actionBar.newTab().setText("Sucursales").setTabListener(this);
             actionBar.addTab(tab);
 
-            tab = actionBar.newTab().setText("Quines Somos").setTabListener(this);
+            tab = actionBar.newTab().setText("Quienes Somos").setTabListener(this);
             actionBar.addTab(tab);
 
 
@@ -72,7 +72,7 @@ public class Principal extends ActionBarActivity implements ActionBar.TabListene
             return true;
         }
 
-        if (id == R.id.Cerrar) {
+        if (id == R.id.Registrate) {
             return true;
         }
 
@@ -86,6 +86,7 @@ public class Principal extends ActionBarActivity implements ActionBar.TabListene
         public ClaseManejadora(FragmentManager fm) {
             super(fm);
         }
+
 
         public Fragment getItem(int arg0) {
             switch (arg0) {
@@ -102,17 +103,19 @@ public class Principal extends ActionBarActivity implements ActionBar.TabListene
         public int getCount() {
             return 3;
         }
+
+
     }
 
-    // Implementación de OnPageChangeListener
+    // Implementation de OnPageChangeListener
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
     }
 
     @Override
-    public void onPageSelected(int position) {
-
+    public void onPageSelected(int i) {
+        getSupportActionBar().setSelectedNavigationItem(i);
     }
 
     @Override
@@ -120,7 +123,7 @@ public class Principal extends ActionBarActivity implements ActionBar.TabListene
 
     }
 
-    // Implementación de TabListener
+
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
         mViewPager.setCurrentItem(tab.getPosition());
@@ -135,4 +138,4 @@ public class Principal extends ActionBarActivity implements ActionBar.TabListene
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
 
     }
-}
+   }

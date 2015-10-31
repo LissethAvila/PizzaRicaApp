@@ -9,8 +9,8 @@
         android:orderInCategory="100"
         app:showAsAction="never" />
     <item
-        android:id="@+id/Cerrar"
-        android:title="Cerrar Sesion"
+        android:id="@+id/Registrate"
+        android:title="Regístrate"
         android:orderInCategory="100"
         app:showAsAction="never" />
 
