@@ -1,6 +1,7 @@
 package privado.lisseth.pizzaricaapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -79,6 +80,25 @@ public class Principal extends ActionBarActivity implements ActionBar.TabListene
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        boolean result = super.onPrepareOptionsMenu(menu);
+        menu.findItem(R.id.Iniciar).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(Principal.this, Iniciar_Sesion.class));
+                return true;
+            }
+        });
+        menu.findItem(R.id.Registrate).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(Principal.this, Registrarse.class));
+                return true;
+            }
+        });
+        return result;
+    }
 
 
     public class ClaseManejadora extends FragmentPagerAdapter {

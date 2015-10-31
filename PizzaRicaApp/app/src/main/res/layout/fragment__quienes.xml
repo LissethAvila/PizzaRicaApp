@@ -10,7 +10,7 @@
         android:layout_height="107dp"
         android:id="@+id/TextMision"
         android:layout_gravity="center_horizontal"
-        android:text="Proveer experiencias que sobrepasan las expectativas de nuestros clientes, a través de la innovación y servicio diferenciado"
+        android:text="Proveer experiencias que sobrepasan las expectativas de nuestros clientes"
         android:textAlignment="inherit"
         android:textAppearance="@color/background_material_light" />
 

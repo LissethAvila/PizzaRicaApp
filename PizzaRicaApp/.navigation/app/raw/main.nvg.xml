@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "privado.lisseth.pizzaricaapp.Principal"/>
+      <point      
+        x = "48"      
+        y = "108"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "privado.lisseth.pizzaricaapp.Principal"/>
+      <point      
+        x = "1292"      
+        y = "908"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "privado.lisseth.pizzaricaapp.MapaSucursal"/>
+      <point      
+        x = "500"      
+        y = "4140"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "privado.lisseth.pizzaricaapp.Registrarse"/>
+      <point      
+        x = "500"      
+        y = "2120"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "privado.lisseth.pizzaricaapp.Registrarse"/>
+      <point      
+        x = "2080"      
+        y = "2120"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "privado.lisseth.pizzaricaapp.Iniciar_Sesion"/>
+      <point      
+        x = "2124"      
+        y = "92"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "privado.lisseth.pizzaricaapp.Iniciar_Sesion"/>
+      <point      
+        x = "3704"      
+        y = "92"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="privado.lisseth.pizzaricaapp.Registrarse">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nombre:"
+        android:id="@+id/nombre"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Apellido:"
+        android:id="@+id/apellido"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Dirección:"
+        android:id="@+id/direccion"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText4"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Teléfono:"
+        android:id="@+id/telefono"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText5"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Usuario:"
+        android:id="@+id/usuario"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText6"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Contraseña:"
+        android:id="@+id/contraseña"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText7"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Confirmar Contraseña:"
+        android:id="@+id/confcontraseña"
+        android:layout_above="@+id/editText8"
+        android:layout_alignRight="@+id/editText7"
+        android:layout_alignEnd="@+id/editText7" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/nombre"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/apellido"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/editText3"
+        android:layout_alignEnd="@+id/editText3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText5"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/direccion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/editText4"
+        android:layout_alignEnd="@+id/editText4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText6"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/telefono"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/editText5"
+        android:layout_alignEnd="@+id/editText5" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText7"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/usuario"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/editText6"
+        android:layout_alignEnd="@+id/editText6" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText8"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/contraseña"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/registrar"
+        android:layout_toStartOf="@+id/registrar" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText9"
+        android:layout_alignTop="@+id/editText8"
+        android:layout_toLeftOf="@+id/registrar"
+        android:layout_toStartOf="@+id/registrar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTRARSE"
+        android:id="@+id/registrar"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/contraseña"
+        android:layout_toEndOf="@+id/contraseña" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText10"
+        android:layout_alignTop="@+id/editText8"
+        android:layout_alignLeft="@+id/confcontraseña"
+        android:layout_alignStart="@+id/confcontraseña"
+        android:layout_alignRight="@+id/confcontraseña"
+        android:layout_alignEnd="@+id/confcontraseña" />
+</RelativeLayout>

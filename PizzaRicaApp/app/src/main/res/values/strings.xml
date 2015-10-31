@@ -9,4 +9,6 @@
     <string name="title_activity_mapa_sucursal">Sucursales</string>
     <string name="Producto">Producto</string>
     <string name="Quienes">Quienes</string>
+    <string name="title_activity_iniciar__sesion">Iniciar_Sesion</string>
+    <string name="title_activity_registrarse">Registrarse</string>
 </resources>

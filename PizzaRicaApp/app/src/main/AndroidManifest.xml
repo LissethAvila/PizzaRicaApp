@@ -39,6 +39,14 @@
             android:name=".MapaSucursal"
             android:label="@string/title_activity_mapa_sucursal" >
         </activity>
+        <activity
+            android:name=".Iniciar_Sesion"
+            android:label="@string/title_activity_iniciar__sesion" >
+        </activity>
+        <activity
+            android:name=".Registrarse"
+            android:label="@string/title_activity_registrarse" >
+        </activity>
     </application>
 
 </manifest>
