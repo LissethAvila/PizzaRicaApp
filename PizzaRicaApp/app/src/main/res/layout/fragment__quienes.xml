@@ -14,7 +14,7 @@
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="135dp"
+        android:layout_height="163dp"
         android:id="@+id/textmision"
         android:layout_gravity="center_horizontal|top"
         android:text="Proveer experiencias que sobrepasan las expectativas de nuestros clientes, a través de la innovación y servicio diferenciado"
@@ -30,9 +30,16 @@
         android:id="@+id/vision"
         android:layout_gravity="center" />
 
+    <ImageView
+        android:layout_width="336dp"
+        android:layout_height="176dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/logopizza" />
+
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="99dp"
+        android:layout_height="110dp"
         android:id="@+id/textvision"
         android:layout_gravity="center"
         android:text="Ser reconocidos como la organización operadora de restaurantes más confiable"

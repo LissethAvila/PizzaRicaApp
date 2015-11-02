@@ -13,4 +13,7 @@
     <string name="title_activity_registrarse">Registrarse</string>
     <string name="title_activity_producto__pizza">Producto_Pizza</string>
     <string name="title_activity_admon_sucursal">Admon Sucursal</string>
+    <string name="title_activity_menu__administrador">Menu Administrador</string>
+    <string name="title_activity_nueva__sucursal">Nueva Sucursal</string>
+    <string name="title_activity_nuevo__producto">Nuevo Producto</string>
 </resources>

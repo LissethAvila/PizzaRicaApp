@@ -8,16 +8,16 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class Registrarse extends ActionBarActivity {
+public class Menu_Administrador extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrarse);
-        findViewById(R.id.registrar).setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_menu__administrador);
+        findViewById(R.id.crearSucursal).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Registrarse.this, Iniciar_Sesion.class));
+                startActivity(new Intent(Menu_Administrador.this, Nueva_Sucursal.class));
             }
         });
     }
@@ -25,7 +25,7 @@ public class Registrarse extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_registrarse, menu);
+        getMenuInflater().inflate(R.menu.menu__administrador, menu);
         return true;
     }
 

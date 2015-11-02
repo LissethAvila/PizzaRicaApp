@@ -43,9 +43,6 @@ public class Fragment_Producto extends Fragment {
             @Override
             public void onItemClick(AdapterView adapterView, View view, int i, long l) {
                 Toast.makeText(VistaProducto.getContext(), "presiono " + i, Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(),Producto_Pizza.class);
-                startActivity(intent);
-
             }
         });
 
@@ -56,6 +53,7 @@ public class Fragment_Producto extends Fragment {
                 return false;
             }
         });
+
 
 
         return VistaProducto;

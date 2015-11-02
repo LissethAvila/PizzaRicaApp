@@ -55,6 +55,18 @@
             android:name=".AdmonSucursal"
             android:label="@string/title_activity_admon_sucursal" >
         </activity>
+        <activity
+            android:name=".Menu_Administrador"
+            android:label="@string/title_activity_menu__administrador" >
+        </activity>
+        <activity
+            android:name=".Nueva_Sucursal"
+            android:label="@string/title_activity_nueva__sucursal" >
+        </activity>
+        <activity
+            android:name=".Nuevo_Producto"
+            android:label="@string/title_activity_nuevo__producto" >
+        </activity>
     </application>
 
 </manifest>

@@ -43,7 +43,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/direccion"
+        android:id="@+id/direccionSuc"
         android:layout_below="@+id/apellido"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -57,11 +57,11 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/telefono"
-        android:layout_below="@+id/direccion"
+        android:layout_below="@+id/direccionSuc"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/direccion"
-        android:layout_alignEnd="@+id/direccion"
+        android:layout_alignRight="@+id/direccionSuc"
+        android:layout_alignEnd="@+id/direccionSuc"
         android:hint="Teléfono" />
 
     <EditText
