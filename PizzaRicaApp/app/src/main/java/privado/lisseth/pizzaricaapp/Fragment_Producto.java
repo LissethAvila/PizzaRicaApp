@@ -37,14 +37,34 @@ public class Fragment_Producto extends Fragment {
         adapter = new Vista_Lista(VistaProducto.getContext(), titulo, imagenes);
         lista.setAdapter(adapter);
 
-        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 
             @Override
-            public void onItemClick(AdapterView adapterView, View view, int i, long l) {
-                Toast.makeText(VistaProducto.getContext(), "presiono " + i, Toast.LENGTH_SHORT).show();
+           // public void onItemClick(AdapterView adapterView, View view, int i, long l) {
+                public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                    // TODO Auto-generated method stub
+                 //   int itm = arg0.getItemAtPosition(arg2);
+                    switch (arg2) {
+                        case 0:
+                            //Toast.makeText(VistaProducto.getContext(), "Position Zero", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getActivity(), Producto_Pizza.class);
+                            startActivity(intent);
+                            break;
+                        case 1:
+                            Intent intent1 = new Intent(getActivity(), Producto_Bebida.class);
+                            startActivity(intent1);
+                            break;
+                        case 2:
+                            Intent intent2 = new Intent(getActivity(), Producto_Extra.class);
+                            startActivity(intent2);
+                            break;
+                //Intent intencion = new Intent(getApplicationContext(), Producto_Pizza.class);
+               // lista.startActionMode(Intent(Fragment_Producto.this, Registrarse.class));
+               // return true;
+                //Toast.makeText(VistaProducto.getContext(), "presiono " + i, Toast.LENGTH_SHORT).show();
             }
-        });
+            }});
 
         lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -61,6 +81,7 @@ public class Fragment_Producto extends Fragment {
     }
 
 
-   }
+
+}
 
 

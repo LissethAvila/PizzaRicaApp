@@ -48,16 +48,12 @@
             android:label="@string/title_activity_registrarse" >
         </activity>
         <activity
-            android:name=".Producto_Pizza"
-            android:label="@string/title_activity_producto__pizza" >
-        </activity>
-        <activity
-            android:name=".AdmonSucursal"
-            android:label="@string/title_activity_admon_sucursal" >
-        </activity>
-        <activity
             android:name=".Menu_Administrador"
             android:label="@string/title_activity_menu__administrador" >
+        </activity>
+        <activity
+            android:name=".Producto_Pizza"
+            android:label="@string/title_activity_producto__pizza" >
         </activity>
         <activity
             android:name=".Nueva_Sucursal"
@@ -66,6 +62,14 @@
         <activity
             android:name=".Nuevo_Producto"
             android:label="@string/title_activity_nuevo__producto" >
+        </activity>
+        <activity
+            android:name=".Producto_Bebida"
+            android:label="@string/title_activity_producto__bebida" >
+        </activity>
+        <activity
+            android:name=".Producto_Extra"
+            android:label="@string/title_activity_producto__extra" >
         </activity>
     </application>
 

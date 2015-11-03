@@ -1,8 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="privado.lisseth.pizzaricaapp.Producto_Pizza">
-
+    tools:context="privado.lisseth.pizzaricaapp.Producto_Extra">
     <item
         android:id="@+id/Iniciar"
         android:title="Iniciar Sesion"
@@ -13,5 +12,4 @@
         android:title="Regístrate"
         android:orderInCategory="100"
         app:showAsAction="never" />
-
 </menu>

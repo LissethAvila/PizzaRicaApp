@@ -22,10 +22,74 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "privado.lisseth.pizzaricaapp.Menu_Administrador"/>
+      <point      
+        x = "500"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "privado.lisseth.pizzaricaapp.Menu_Administrador"/>
+      <point      
+        x = "2080"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "privado.lisseth.pizzaricaapp.MapaSucursal"/>
       <point      
         x = "500"      
         y = "4140"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "privado.lisseth.pizzaricaapp.Nuevo_Producto"/>
+      <point      
+        x = "500"      
+        y = "10200"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "privado.lisseth.pizzaricaapp.Nuevo_Producto"/>
+      <point      
+        x = "2080"      
+        y = "10200"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "privado.lisseth.pizzaricaapp.Nueva_Sucursal"/>
+      <point      
+        x = "2080"      
+        y = "2120"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "privado.lisseth.pizzaricaapp.Nueva_Sucursal"/>
+      <point      
+        x = "3660"      
+        y = "2120"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "privado.lisseth.pizzaricaapp.Producto_Pizza"/>
+      <point      
+        x = "500"      
+        y = "8180"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "privado.lisseth.pizzaricaapp.Producto_Pizza"/>
+      <point      
+        x = "2080"      
+        y = "8180"/>
     </statePointEntry>
     <statePointEntry>
       <state      

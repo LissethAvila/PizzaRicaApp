@@ -16,4 +16,6 @@
     <string name="title_activity_menu__administrador">Menu Administrador</string>
     <string name="title_activity_nueva__sucursal">Nueva Sucursal</string>
     <string name="title_activity_nuevo__producto">Nuevo Producto</string>
+    <string name="title_activity_producto__bebida">Producto_Bebida</string>
+    <string name="title_activity_producto__extra">Producto_Extra</string>
 </resources>
