@@ -10,39 +10,45 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="MISIÓN"
         android:id="@+id/mision"
-        android:layout_gravity="center_horizontal|top" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="163dp"
-        android:id="@+id/textmision"
         android:layout_gravity="center_horizontal|top"
-        android:text="Proveer experiencias que sobrepasan las expectativas de nuestros clientes, a través de la innovación y servicio diferenciado"
-        android:autoText="false"
-        android:editable="false"
-        android:enabled="true" />
+        android:enabled="true"
+        android:layout_marginTop="40dp" />
+
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="94dp"
+        android:layout_height="113dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="                                                                                                                                                                                                                                                                                                                                                                                              Proveer experiencias que sobrepasan las expectativas de nuestros clientes, a través de la innovación y servicio diferenciado"
+        android:id="@+id/textMision"
+        android:layout_gravity="top|right|center_horizontal"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="VISIÓN"
         android:id="@+id/vision"
-        android:layout_gravity="center" />
+        android:layout_gravity="center_horizontal|top"
+        android:enabled="true"
+        android:layout_marginTop="140dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="76dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Ser reconocidos como la organización operadora de restaurantes más confiable"
+        android:id="@+id/textVision"
+        android:layout_gravity="left|center_vertical" />
 
     <ImageView
-        android:layout_width="336dp"
-        android:layout_height="176dp"
+        android:layout_width="230dp"
+        android:layout_height="150dp"
         android:id="@+id/imageView"
-        android:layout_gravity="center_horizontal|bottom"
-        android:background="@drawable/logopizza" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:id="@+id/textvision"
         android:layout_gravity="center"
-        android:text="Ser reconocidos como la organización operadora de restaurantes más confiable"
-        android:enabled="true" />
+        android:background="@drawable/logopizza"
+        android:layout_marginTop="100dp" />
 
 </FrameLayout>

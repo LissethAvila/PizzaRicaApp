@@ -60,6 +60,6 @@ public class MapaSucursal extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(14.8460638,-91.5280099)).title("PizzaRica"));
     }
 }
