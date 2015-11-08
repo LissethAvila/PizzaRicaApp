@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -16,7 +17,9 @@ public class MapaSucursal extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa_sucursal);
+        System.out.print("Aqui llego1");
         setUpMapIfNeeded();
+
     }
 
     @Override
@@ -43,11 +46,13 @@ public class MapaSucursal extends FragmentActivity {
     private void setUpMapIfNeeded() {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
+            System.out.print("Aqui llego2");
             // Try to obtain the map from the SupportMapFragment.
-            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+            mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapSuc))
                     .getMap();
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
+                System.out.print("Aqui llego3");
                 setUpMap();
             }
         }
@@ -60,6 +65,7 @@ public class MapaSucursal extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(14.8460638,-91.5280099)).title("PizzaRica"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(14.8460638,-91.5280099)).title("PizzaRica").icon(BitmapDescriptorFactory.fromResource(R.drawable.pizzazz)).snippet("24 Avenida 4-83"));
+        mMap.getMyLocation();
     }
 }

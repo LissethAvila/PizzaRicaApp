@@ -16,7 +16,7 @@ public class
     public static final String UPDATE = "http://" + IP +"/"+CARPETAS + "/I%20Wish/actualizar_meta.php";
     public static final String DELETE = "http://" + IP +"/"+CARPETAS + "/I%20Wish/borrar_meta.php";
     public static final String INSERT = "http://" + IP +"/"+CARPETAS + "/I%20Wish/insertar_meta.php";
-
+    public static final String EMPRESA = "http://" + IP +"/"+CARPETAS + "/Empresa.php";
     //Clave Usuario Sesion
 
     public static final Boolean SESION = false;
