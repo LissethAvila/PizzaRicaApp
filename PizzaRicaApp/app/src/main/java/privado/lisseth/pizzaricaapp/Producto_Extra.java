@@ -1,8 +1,8 @@
 package privado.lisseth.pizzaricaapp;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,12 +15,7 @@ public class Producto_Extra extends ActionBarActivity {
 
     Vista_Lista adapter;
 
-    String[] titulo = new String[]{
-            "Pie de Queso",
-            "Pie de Manzana",
-            "Canelitas",
-            "Rollitos de Queso",
-    };
+    String[] titulo = new String[]{"Pasteles","Ingredientes","Canelitas"};
 
     int[] imagenes = {
             R.drawable.pastel,

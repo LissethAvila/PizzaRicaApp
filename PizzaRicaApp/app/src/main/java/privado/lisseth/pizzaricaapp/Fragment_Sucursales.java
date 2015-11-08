@@ -1,9 +1,6 @@
 package privado.lisseth.pizzaricaapp;
 
-import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
@@ -16,13 +13,15 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class Fragment_Sucursales extends Fragment {
-
+    MapaSucursal Map = new MapaSucursal();
     View VistaSucursal; //Nueva vista
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate enlace de .java con .xml
-        VistaSucursal = inflater.inflate(R.layout.fragment__sucursales, container, false);
+        VistaSucursal = inflater.inflate(R.layout.activity_mapa_sucursal, container, false);
+       // Map.setUpMapIfNeeded();
+
         return VistaSucursal;
 
     }
@@ -80,7 +79,7 @@ public class MapaSucursal extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(0,0)).title("MiCasa"));
     }
 }
     }

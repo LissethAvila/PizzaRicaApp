@@ -15,12 +15,7 @@ public class Producto_Bebida extends ActionBarActivity {
 
     Vista_Lista adapter;
 
-    String[] titulo = new String[]{
-            "Naranja",
-            "Limonada",
-            "Coca Cola",
-            "Chocolate",
-    };
+    String[] titulo = new String[]{"1/2 Litro","Lata","Desechable"};
 
     int[] imagenes = {
             R.drawable.bebida2,

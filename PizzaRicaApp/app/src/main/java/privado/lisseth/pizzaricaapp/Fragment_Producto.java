@@ -10,17 +10,26 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import cz.msebera.android.httpclient.Header;
+
+
+
 public class Fragment_Producto extends Fragment {
 
     View VistaProducto; //Nueva vista
-
+    ListView lista;
+    ArrayList<String> iddato;
     Vista_Lista adapter;
-    String[] titulo = new String[]{
-            "PIZZAS",
-            "BEBIDAS",
-            "EXTRAS",
-
-    };
 
     int[] imagenes = {
             R.drawable.pizza2,
@@ -32,55 +41,102 @@ public class Fragment_Producto extends Fragment {
 
         // Inflate enlace de .java con .xml
         VistaProducto = inflater.inflate(R.layout.fragment__producto, container, false);
+        ObtDatos();
 
-        final ListView lista = (ListView) VistaProducto.findViewById(R.id.ListaProductos);
-        adapter = new Vista_Lista(VistaProducto.getContext(), titulo, imagenes);
-        lista.setAdapter(adapter);
+        lista = (ListView) VistaProducto.findViewById(R.id.ListaProductos);
 
        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 
-            @Override
-           // public void onItemClick(AdapterView adapterView, View view, int i, long l) {
-                public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                    // TODO Auto-generated method stub
-                 //   int itm = arg0.getItemAtPosition(arg2);
-                    switch (arg2) {
-                        case 0:
-                            //Toast.makeText(VistaProducto.getContext(), "Position Zero", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getActivity(), Producto_Pizza.class);
-                            startActivity(intent);
-                            break;
-                        case 1:
-                            Intent intent1 = new Intent(getActivity(), Producto_Bebida.class);
-                            startActivity(intent1);
-                            break;
-                        case 2:
-                            Intent intent2 = new Intent(getActivity(), Producto_Extra.class);
-                            startActivity(intent2);
-                            break;
-                //Intent intencion = new Intent(getApplicationContext(), Producto_Pizza.class);
-               // lista.startActionMode(Intent(Fragment_Producto.this, Registrarse.class));
-               // return true;
-                //Toast.makeText(VistaProducto.getContext(), "presiono " + i, Toast.LENGTH_SHORT).show();
-            }
-            }});
+           @Override
 
-        lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView adapterView, View view, int i, long l) {
-                Toast.makeText(VistaProducto.getContext(), "presiono LARGO " + i, Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
+           public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+               Intent intent = new Intent(getActivity(), Producto_Pizza.class);
+               intent.putExtra("IdTProducto", CapturaId(arg2));
+               startActivity(intent);
 
-
+           }});
 
         return VistaProducto;
 
     }
 
+    //Obtener datos bd
+    public void ObtDatos(){
+        AsyncHttpClient client = new AsyncHttpClient();
+        String url= Constantes.GET;
 
+
+        client.post(url, new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
+                if (statusCode == 200) {
+                    CargarLista(obtDatosJSON(new String(response)));
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
+                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+            }
+
+        });
+
+
+    }
+
+    //Obtener datos JSON
+    public ArrayList<String> obtDatosJSON(String web){
+        ArrayList<String> tproductos = new ArrayList<String>();
+        iddato = new ArrayList<String>();
+
+        try {
+            JSONArray jsonArray = new JSONArray(web);
+            String texto;
+            String id;
+            for (int i=0;i<jsonArray.length();i++){
+                texto = jsonArray.getJSONObject(i).getString("Nombre");
+                id = jsonArray.getJSONObject(i).getString("IdTProducto");
+                tproductos.add(texto);
+                iddato.add(id);
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return tproductos;
+    }
+
+    public void CargarLista(ArrayList<String> dato){
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,dato);
+        //lista.setAdapter(adapter);
+        List<String> stockList = new ArrayList<String>();
+        for (int i = 0; i<dato.size();i++)
+            stockList.add(dato.get(i));
+
+        String[] titulo = new String[stockList.size()];
+        titulo = stockList.toArray(titulo);
+
+        adapter = new Vista_Lista(VistaProducto.getContext(), titulo, imagenes);
+        lista.setAdapter(adapter);
+
+    }
+
+    public int CapturaId(int dato){
+        List<String>  posicionId = new ArrayList<String>();
+
+        for (int i = 0; i<iddato.size();i++)
+            posicionId.add(iddato.get(i));
+
+
+        int idPos = Integer.parseInt(posicionId.get(dato));
+        System.out.println("ListaPosicion> " + idPos);
+
+        return idPos;
+
+    }
 
 }
 
