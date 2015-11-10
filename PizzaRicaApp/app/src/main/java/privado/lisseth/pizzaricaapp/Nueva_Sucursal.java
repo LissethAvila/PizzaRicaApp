@@ -1,5 +1,6 @@
 package privado.lisseth.pizzaricaapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,8 +17,15 @@ public class Nueva_Sucursal extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_nueva__sucursal, menu);
+        boolean result = super.onPrepareOptionsMenu(menu);
+
+        menu.findItem(R.id.Cerrar).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(Nueva_Sucursal.this, Iniciar_Sesion.class));
+                return true;
+            }
+        });
         return true;
     }
 
@@ -29,10 +37,10 @@ public class Nueva_Sucursal extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+       // if (id == R.id.action_settings) {
             return true;
         }
 
-        return super.onOptionsItemSelected(item);
-    }
+        //return super.onOptionsItemSelected(item);
+    //}
 }

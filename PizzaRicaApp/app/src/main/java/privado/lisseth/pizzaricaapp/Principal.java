@@ -76,6 +76,9 @@ public class Principal extends ActionBarActivity implements ActionBar.TabListene
         if (id == R.id.Registrate) {
             return true;
         }
+        if (id == R.id.carrito) {
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -94,6 +97,13 @@ public class Principal extends ActionBarActivity implements ActionBar.TabListene
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 startActivity(new Intent(Principal.this, Registrarse.class));
+                return true;
+            }
+        });
+        menu.findItem(R.id.carrito).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(Principal.this, Carrito.class));
                 return true;
             }
         });

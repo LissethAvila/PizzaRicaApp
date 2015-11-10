@@ -1,8 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".Principal"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Principal"
     >
-
+    <item
+        android:id="@+id/carrito"
+        android:title="Carrito"
+        android:icon="@drawable/carritoblanco"
+        app:showAsAction="always" />
     <item
         android:id="@+id/Iniciar"
         android:title="Iniciar Sesion"

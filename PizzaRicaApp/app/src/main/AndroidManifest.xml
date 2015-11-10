@@ -12,6 +12,7 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -70,6 +71,14 @@
         <activity
             android:name=".Producto_Extra"
             android:label="@string/title_activity_producto__extra" >
+        </activity>
+        <activity
+            android:name=".Selec_Tamano"
+            android:label="@string/title_activity_selec__tamano" >
+        </activity>
+        <activity
+            android:name=".Carrito"
+            android:label="@string/title_activity_carrito" >
         </activity>
     </application>
 

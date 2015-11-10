@@ -49,17 +49,11 @@ public class Producto_Pizza extends ActionBarActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(), "presiono " + i, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Selec_Tamano.class);
+                startActivity(intent);
             }
         });
 
-        lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(), "presiono LARGO " + i, Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
     }
 
     public void ObtDatos(){
@@ -131,6 +125,7 @@ public class Producto_Pizza extends ActionBarActivity {
     }
 
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -145,36 +140,36 @@ public class Producto_Pizza extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-            //noinspection SimplifiableIfStatement
-            if (id == R.id.Iniciar) {
-                return true;
-            }
-
-            if (id == R.id.Registrate) {
-                return true;
-            }
-
-            return super.onOptionsItemSelected(item);
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.Iniciar) {
+            return true;
         }
 
-        @Override
-        public boolean onPrepareOptionsMenu(Menu menu) {
-            boolean result = super.onPrepareOptionsMenu(menu);
-            menu.findItem(R.id.Iniciar).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem menuItem) {
-                    startActivity(new Intent(Producto_Pizza.this, Iniciar_Sesion.class));
-                    return true;
-                }
-            });
-            menu.findItem(R.id.Registrate).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem menuItem) {
-                    startActivity(new Intent(Producto_Pizza.this, Registrarse.class));
-                    return true;
-                }
-            });
-            return result;
+        if (id == R.id.Registrate) {
+            return true;
         }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        boolean result = super.onPrepareOptionsMenu(menu);
+        menu.findItem(R.id.Iniciar).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(Producto_Pizza.this, Iniciar_Sesion.class));
+                return true;
+            }
+        });
+        menu.findItem(R.id.Registrate).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(Producto_Pizza.this, Registrarse.class));
+                return true;
+            }
+        });
+        return result;
+    }
 
     }

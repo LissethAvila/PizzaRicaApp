@@ -18,4 +18,6 @@
     <string name="title_activity_nuevo__producto">Nuevo Producto</string>
     <string name="title_activity_producto__bebida">Producto_Bebida</string>
     <string name="title_activity_producto__extra">Producto_Extra</string>
+    <string name="title_activity_selec__tamano">Selec_Tamano</string>
+    <string name="title_activity_carrito">Carrito</string>
 </resources>
